@@ -1,23 +1,38 @@
-{
-  "name": "Nome del tuo dispositivo",
-  "version": "1.0.0",
-  "builds": [
-    {
-      "chipFamily": "ESP32-S3",
-      "parts": [
-        {
-          "path": "firmware/bootloader.bin",
-          "offset": 0
-        },
-        {
-          "path": "firmware/partitions.bin",
-          "offset": 32768
-        },
-        {
-          "path": "firmware/firmware.bin",
-          "offset": 65536
-        }
-      ]
-    }
-  ]
-}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Installazione Firmware</title>
+
+    <script
+      type="module"
+      src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js">
+    </script>
+
+    <style>
+      body{
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      h1{
+        margin-bottom: 10px;
+      }
+    </style>
+</head>
+<body>
+
+<h1>Installazione Firmware ESP32-S3</h1>
+
+<p>
+Collega il dispositivo tramite USB e premi il pulsante.
+</p>
+
+<esp-web-install-button manifest="manifest.json">
+</esp-web-install-button>
+
+</body>
+</html>
