@@ -1,38 +1,74 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Installazione Firmware</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Firmware ESP32-S3</title>
 
-    <script
-      type="module"
-      src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js">
-    </script>
+  <script
+    type="module"
+    src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js">
+  </script>
 
-    <style>
-      body{
-        font-family: Arial, sans-serif;
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 20px;
-      }
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
 
-      h1{
-        margin-bottom: 10px;
-      }
-    </style>
+      background-color: #0f1115;
+      color: #ffffff;
+
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #b5b5b5;
+      margin-bottom: 25px;
+      max-width: 400px;
+    }
+
+    esp-web-install-button {
+      --esp-tools-button-color: #4f8cff;
+      --esp-tools-button-text-color: white;
+      --esp-tools-button-border-radius: 8px;
+      transform: scale(1.1);
+    }
+
+    .box {
+      padding: 40px;
+      border: 1px solid #222;
+      border-radius: 12px;
+      background-color: #151923;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Installazione Firmware ESP32-S3</h1>
+  <div class="box">
 
-<p>
-Collega il dispositivo tramite USB e premi il pulsante.
-</p>
+    <h1>Firmware ESP32-S3</h1>
 
-<esp-web-install-button manifest="manifest.json">
-</esp-web-install-button>
+    <p>
+      Collega il dispositivo via USB e avvia l’installazione del firmware.
+    </p>
+
+    <esp-web-install-button manifest="manifest.json">
+    </esp-web-install-button>
+
+  </div>
 
 </body>
 </html>
