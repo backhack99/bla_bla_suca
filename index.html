@@ -13,12 +13,12 @@
 
 <style>
 :root{
-    --bg:#1a1a1a;
+    --bg:#111111;
     --card:#252525;
     --border:#3a3a3a;
     --text:#ffffff;
     --muted:#b0b0b0;
-    --accent:#707070;
+    --accent:#f2b800;
 }
 
 *{
@@ -47,25 +47,28 @@ body{
 }
 
 .card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:20px;
+    background:#222222;
 
-    padding:50px;
+    border:1px solid #333333;
+
+    border-radius:24px;
+
+    padding:60px 50px;
 
     text-align:center;
 
     box-shadow:
-    0 15px 40px rgba(0,0,0,.35);
+        0 25px 60px rgba(0,0,0,.45);
 }
 
 .logo{
-    width:120px;
+    width:320px;
+    max-width:90%;
     height:auto;
 
     display:block;
 
-    margin:0 auto 25px;
+    margin:0 auto 15px auto;
 }
 
 h1{
@@ -178,8 +181,6 @@ esp-web-install-button{
 
         <!-- Sostituisci logo.png con il nome del tuo file -->
         <img src="banacan logo.jpeg" alt="BANANA Logo" class="logo">
-
-        <h1>BANANA</h1>
 
         <p class="subtitle">
             Installa o aggiorna il firmware del tuo dispositivo
